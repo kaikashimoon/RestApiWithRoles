@@ -30,7 +30,7 @@ userScherma.statics.encryptPassword = async (password) =>{
 }
 
 userScherma.statics.comparePassword = async (password, recivedPassword) => {
-    await bcrypt.compare(password, recivedPassword)
+   return await bcrypt.compare(password, recivedPassword)
 }
 
 
