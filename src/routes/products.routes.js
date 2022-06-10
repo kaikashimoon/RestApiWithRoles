@@ -1,13 +1,13 @@
 import { Router } from "express";
 const router = Router()
 import {createProduct, getProducts, getProductById, updateProductById, deleteProductById   } from "../controllers/products.controller";
+import {verifyToken} from "../middlewares"
 
-
-router.post('/', createProduct)
+router.post('/', verifyToken, createProduct)
 router.get('/', getProducts)
 router.get('/:productId', getProductById)
-router.put('/:productId', updateProductById)
-router.delete('/:productId', deleteProductById)
+router.put('/:productId', verifyToken, updateProductById)
+router.delete('/:productId', verifyToken, deleteProductById)
 
 
 
