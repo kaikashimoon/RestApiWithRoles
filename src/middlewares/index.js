@@ -1,4 +1,4 @@
-import {verifyToken} from './authjwt'
-import {} from './verifySignup'
+import {verifyToken, isAdmin, isModerator} from './authjwt'
+import { checkRolesExisted, checkDuplicateUsernameOrEmail} from './verifySignup'
 
-export { verifyToken}
+export { verifyToken, isAdmin, isModerator, checkDuplicateUsernameOrEmail, checkRolesExisted}
